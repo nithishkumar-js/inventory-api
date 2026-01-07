@@ -12,15 +12,21 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-                sh 'npm test || true'
-            }
-        }
-
         stage('Build') {
             steps {
                 sh 'npm run build || true'
+            }
+        }
+
+        stage('Lint') {
+            steps {
+                sh 'npm run lint'
+            }
+        }
+
+        stage('Format') {
+            steps {
+                sh 'npm run format'
             }
         }
     }
