@@ -179,3 +179,4 @@ const SaleSchema = new Schema({
 ## License
 MIT
 # inventory-api
+# inventory-api

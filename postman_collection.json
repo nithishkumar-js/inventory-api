@@ -1,0 +1,425 @@
+{
+  "info": {
+    "_postman_id": "inventory-backend-full-collection",
+    "name": "Inventory Backend Full API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth - Logout (NOT IMPLEMENTED)",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:5000/api/auth/logout",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "auth", "logout"]
+        }
+      }
+    },
+    {
+      "name": "Auth - Me (NOT IMPLEMENTED)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5000/api/auth/me",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "auth", "me"]
+        }
+      }
+    },
+          {
+            "name": "Products - Get Single (NOT IMPLEMENTED)",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:5000/api/products/{{productId}}",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "products", "{{productId}}"]
+              }
+            }
+          },
+          {
+            "name": "Products - Delete (NOT IMPLEMENTED)",
+            "request": {
+              "method": "DELETE",
+              "url": {
+                "raw": "http://localhost:5000/api/products/{{productId}}",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "products", "{{productId}}"]
+              }
+            }
+          },
+          {
+            "name": "Products - Low Stock (NOT IMPLEMENTED)",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:5000/api/products/low-stock",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "products", "low-stock"]
+              }
+            }
+          },
+          {
+            "name": "Orders - Get Single (NOT IMPLEMENTED)",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:5000/api/orders/{{orderId}}",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "orders", "{{orderId}}"]
+              }
+            }
+          },
+          {
+            "name": "Orders - Update Status (NOT IMPLEMENTED)",
+            "request": {
+              "method": "PUT",
+              "url": {
+                "raw": "http://localhost:5000/api/orders/{{orderId}}/status",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "orders", "{{orderId}}", "status"]
+              }
+            }
+          },
+          {
+            "name": "Orders - Delete (NOT IMPLEMENTED)",
+            "request": {
+              "method": "DELETE",
+              "url": {
+                "raw": "http://localhost:5000/api/orders/{{orderId}}",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "orders", "{{orderId}}"]
+              }
+            }
+          },
+          {
+            "name": "Users - Get Single (NOT IMPLEMENTED)",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:5000/api/users/{{userId}}",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "users", "{{userId}}"]
+              }
+            }
+          },
+          {
+            "name": "Users - Create (NOT IMPLEMENTED)",
+            "request": {
+              "method": "POST",
+              "header": [
+                { "key": "Content-Type", "value": "application/json" }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"name\": \"New User\",\n  \"email\": \"new@example.com\",\n  \"password\": \"password\",\n  \"role\": \"staff\"\n}"
+              },
+              "url": {
+                "raw": "http://localhost:5000/api/users",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "users"]
+              }
+            }
+          },
+          {
+            "name": "Users - Change Role (NOT IMPLEMENTED)",
+            "description": "RBAC: Only users with the 'admin' role can change another user's role. Requires Authorization header with valid admin JWT.",
+            "request": {
+              "method": "PUT",
+              "header": [
+                { "key": "Content-Type", "value": "application/json" }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"role\": \"manager\"\n}"
+              },
+              "url": {
+                "raw": "http://localhost:5000/api/users/{{userId}}/role",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "users", "{{userId}}", "role"]
+              }
+            }
+          },
+          {
+            "name": "Users - Delete (NOT IMPLEMENTED)",
+            "request": {
+              "method": "DELETE",
+              "url": {
+                "raw": "http://localhost:5000/api/users/{{userId}}",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "users", "{{userId}}"]
+              }
+            }
+          },
+          {
+            "name": "Dashboard - Stats (NOT IMPLEMENTED)",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:5000/api/dashboard/stats",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "dashboard", "stats"]
+              }
+            }
+          },
+          {
+            "name": "Dashboard - Sales (NOT IMPLEMENTED)",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:5000/api/dashboard/sales",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "dashboard", "sales"]
+              }
+            }
+          },
+          {
+            "name": "Dashboard - Top Products (NOT IMPLEMENTED)",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:5000/api/dashboard/top-products",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "dashboard", "top-products"]
+              }
+            }
+          },
+          {
+            "name": "Auth - Register",
+            "description": "RBAC: No authentication or role required. Public endpoint for user registration.",
+            "request": {
+              "method": "POST",
+              "header": [
+                { "key": "Content-Type", "value": "application/json" }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"name\": \"Test User\",\n  \"email\": \"test@example.com\",\n  \"password\": \"test1234\"\n}"
+              },
+              "url": {
+                "raw": "http://localhost:5000/api/auth/register",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "auth", "register"]
+              }
+            }
+          },
+          {
+            "name": "Auth - Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"test1234\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "auth", "login"]
+        }
+      }
+    },
+    {
+      "name": "Products - Get All",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5000/api/products",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "products"]
+        }
+      }
+    },
+    {
+      "name": "Products - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Sample Product\",\n  \"price\": 100,\n  \"stock\": 10\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/products",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "products"]
+        }
+      }
+    },
+    {
+      "name": "Products - Update",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Updated Product\",\n  \"price\": 120,\n  \"stock\": 5\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/products/{{productId}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "products", "{{productId}}"]
+        }
+      }
+    },
+    {
+      "name": "Orders - Get All",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5000/api/orders",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "orders"]
+        }
+      }
+    },
+    {
+      "name": "Orders - Get By ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5000/api/orders/{{orderId}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "orders", "{{orderId}}"]
+        }
+      }
+    },
+    {
+      "name": "Orders - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"items\": [\n    { \"productId\": \"{{productId}}\", \"quantity\": 2 }\n  ],\n  \"total\": 200\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/orders",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "orders"]
+        }
+      }
+    },
+    {
+      "name": "Orders - Update Status",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"status\": \"completed\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/orders/{{orderId}}/status",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "orders", "{{orderId}}", "status"]
+        }
+      }
+    },
+    {
+      "name": "Orders - Delete",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:5000/api/orders/{{orderId}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "orders", "{{orderId}}"]
+        }
+      }
+    },
+    {
+      "name": "Users - Get All",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5000/api/users",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "users"]
+        }
+      }
+    },
+    {
+      "name": "Users - Update",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Updated User\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/users/{{userId}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "users", "{{userId}}"]
+        }
+      }
+    }
+  ]
+}
